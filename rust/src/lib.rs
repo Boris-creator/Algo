@@ -1,16 +1,6 @@
+// compare https://github.com/TheAlgorithms/Rust/blob/master/src/sorting/heap_sort.rs
 use std::fmt;
 use wasm_bindgen::prelude::*;
-
-#[wasm_bindgen]
-pub fn test(text: &str, times: i32) -> String {
-    let mut counter = 0;
-    let mut result =  String::from(text);
-    while counter < times {
-        counter += 1;
-        result.push_str(text);
-    }
-    result
-}
 
 #[wasm_bindgen]
 pub fn to_heap(arr: Vec<u8>) -> Vec<u8> {
@@ -40,4 +30,4 @@ fn bubble_up<T: Ord>(arr: &mut Vec<T>, index: usize) {
 fn get_parent(index: usize) -> usize {
     (index - 1) / 2
 }
-// [7, 7, 7, 11, 8, 16, 14, 12, 9, 8, 18, 17, 20, 15, 14, 12, 18, 10, 9, 19, 27, 22, 23, 17, 27, 21, 25, 15, 26, 20, 20, 13, 28, 21, 23, 16, 26, 19]
+
